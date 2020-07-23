@@ -1,0 +1,73 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/beta/hosted/office.js"></script>
+
+    <!-- For more information on Office UI Fabric, visit https://developer.microsoft.com/fabric. -->
+    <link
+      rel="stylesheet"
+      href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"
+    />
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="ms-font-m ms-welcome ms-Fabric">
+    <section id="sideload-msg" class="ms-welcome__main">
+      <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+      <!-- SOLACE DEV CONTENT -->
+      <div class="row">
+        <img width=80 id=connstate src="../../assets/disconnected.png" alt="Disconnected" title="Disconnected"/>
+        <img width="180" height="50" src="../../assets/logo-solace.png" alt="Solace" title="Solace" />
+        <br/>
+    </div>
+    <h2 class="ms-font-xl">Connect to a Solace Event Broker</h2>
+    <div class="row">
+      URL: <input id=txtSolhost value=wss://eventmesh:1443 size=20/>
+    </div>
+    <div class="row">
+      VPN: <input id=txtSolvpn value=default size=10/>
+    </div>
+    <div class="row">
+      User: <input id=txtSoluser value=default size=10/> 
+    </div>
+    <div class="row">
+      Pass: <input type=password id=txtSolpass size=10/>
+    </div>
+    <div class="row">
+      <br/>
+      <button class="ms-Button" id="btnConnectSolace">Connect Solace</button>
+      <button class="ms-Button" id="btnDisconnectSolace">Disconnect</button><br/>
+    </div>
+
+    <h2 class="ms-font-xl">Subscribe to Solace Topics</h2>
+    <div class="row">
+      Topic: <input id=txtSoltopic value=topic/string size=15/>
+    </div>
+    <div class="row">
+      Schema: <select id=mnuSchemas></select>
+    </div>
+    <div class="row">
+      <button class="ms-Button" id="btnSubscribeSolace">Subscribe</button>
+    </div>
+    <div class="row"><br/>
+      Subscribed Topics: <select id=mnuSubscriptions></select>
+    </div>
+    <div class="row"><br/>
+      <textarea id=LOG rows=10 cols=40></textarea>
+    </div>
+  </main>
+  </body>
+</html>
