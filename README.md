@@ -1,6 +1,6 @@
 # Solace Excel Add-In Example
 
-**DEVELOPMENT ONLY** this is an experimental project that is not complete. It began as a clone of [Shared Runtime example from the Office team's github)[https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-shared-runtime-global-state].
+**DEVELOPMENT ONLY** this is an experimental project that is not complete. It began as a clone of the [Shared Runtime example from the Office team's github](https://github.com/OfficeDev/PnP-OfficeAddins/tree/master/Samples/excel-shared-runtime-global-state).
 
 It provides the basic capability to:
 
