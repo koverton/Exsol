@@ -10,6 +10,7 @@ It provides the basic capability to:
   - Messages are in JSON format;
   - All subscribed messages are in the same format
   - Supported schemas are in the src/schemas.ts file
+- Display those messages in the worksheet as a Data Table where messages with the same key update the same row.
 
 ## Side-loading the project
 
