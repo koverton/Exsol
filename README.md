@@ -34,6 +34,17 @@ Clicking 'Connect to Solace' brings up the Solace taskpane.
 - Messages are loaded into the data table with one new row per new rowkey.
 - The keys are established by the schema type expected.
 
+## Sending Sample Messages
+
+There's also a simple ticking price generator available in `tickgen/tickgen.js`. It requires the `solclientjs` npm module so follow the installation instructions:
+
+```shell
+cd tickgen
+npm install
+# edit tickgen.js variables to reflect local environment
+node tickgen.js # send a randomized tick per second on a limited set of symbols.
+```
+
 ## Message Content
 
 The challenge with integrating messaging with UIs always revolves around data format. Excel needs to know the data structure upfront. It has to be a structure that fits tabular displays nicely. We need a way to serialize and deserialize. And we need to know how to `Key` the objects so that we can tell whether a newly received message is a new item, or replaces an old item.
